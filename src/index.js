@@ -8,21 +8,18 @@ const AnimeAPI = require('./anime-api');
 
 const app = express();
 app.use(cors());
-app.use('/twitch-gacha-overlay', express.static(path.resolve(__dirname, './client')));
+app.use(express.static(path.resolve(__dirname, 'client')));
 
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: '*' } });
-
 const animeApi = new AnimeAPI();
-
 const PORT = process.env.PORT || 3000;
-
 
 app.get('/api/get-random-character', async (req, res) => {
   try {
-    const type = req.query.type;
-    const channel = req.query.channel;
-    const sender = req.query.sender;
+    const type = req.query.type.toLowerCase();
+    const channel = req.query.channel.toLowerCase();
+    const sender = req.query.sender.toLowerCase();
 
     let characterId;
 

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/twitch-gacha-overlay/static/css/main.782e720c.css",
-    "main.js": "/twitch-gacha-overlay/static/js/main.ad99776e.js",
-    "static/media/capsule-lower.png": "/twitch-gacha-overlay/static/media/capsule-lower.ef543086b95ad249b988.png",
-    "index.html": "/twitch-gacha-overlay/index.html",
-    "main.782e720c.css.map": "/twitch-gacha-overlay/static/css/main.782e720c.css.map",
-    "main.ad99776e.js.map": "/twitch-gacha-overlay/static/js/main.ad99776e.js.map"
+    "main.css": "/static/css/main.29503435.css",
+    "main.js": "/static/js/main.ff21b55a.js",
+    "static/media/capsule-lower.png": "/static/media/capsule-lower.ef543086b95ad249b988.png",
+    "index.html": "/index.html",
+    "main.29503435.css.map": "/static/css/main.29503435.css.map",
+    "main.ff21b55a.js.map": "/static/js/main.ff21b55a.js.map"
   },
   "entrypoints": [
-    "static/css/main.782e720c.css",
-    "static/js/main.ad99776e.js"
+    "static/css/main.29503435.css",
+    "static/js/main.ff21b55a.js"
   ]
 }
