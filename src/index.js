@@ -31,7 +31,11 @@ app.get('/api/get-random-character', async (req, res) => {
     io.emit(channel, character);
 
     // res.sendStatus(204); // Successful no body
-    res.send(`Nice one @${sender}! You got ${character.name} from ${character.origin} PogChamp`);
+    if (character.id === 106376 || character.name === 'Ganyu') {
+      res.send(`You pulled ${character.name} but unfortunately ${character.name} only loves Marviuz LUL in this channel at least`);
+    } else {
+      res.send(`Nice one @${sender}! You got ${character.name} from ${character.origin} PogChamp`);
+    }
   } catch (err) {
     res.sendStatus(500);
   }
