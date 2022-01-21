@@ -19,6 +19,8 @@ app.get('/api/get-random-character', async (req, res) => {
   try {
     const type = req.query.type;
     const channel = req.query.channel;
+    const sender = req.query.sender;
+
     let characterId;
 
     if (type === 'w') characterId = await animeApi.getRandomFemaleID();
@@ -29,7 +31,7 @@ app.get('/api/get-random-character', async (req, res) => {
     io.emit(channel, character);
 
     // res.sendStatus(204); // Successful no body
-    res.send(JSON.stringify(character));
+    res.send(`Nice one @${sender}! You got ${character.name} from ${character.origin} PogChamp`);
   } catch (err) {
     res.sendStatus(500);
   }
