@@ -4,6 +4,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 
 const AnimeAPI = require('./anime-api');
+const path = require('path');
 
 const app = express();
 app.use(cors());
@@ -39,6 +40,10 @@ app.get('/api/get-random-character', async (req, res) => {
   } catch (err) {
     res.sendStatus(500);
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './client', 'index.html'));
 });
 
 io.on('connection', (socket) => {

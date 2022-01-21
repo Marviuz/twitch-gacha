@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/twitch-gacha-overlay/static/css/main.782e720c.css",
+    "main.js": "/twitch-gacha-overlay/static/js/main.ad99776e.js",
+    "static/media/capsule-lower.png": "/twitch-gacha-overlay/static/media/capsule-lower.ef543086b95ad249b988.png",
+    "index.html": "/twitch-gacha-overlay/index.html",
+    "main.782e720c.css.map": "/twitch-gacha-overlay/static/css/main.782e720c.css.map",
+    "main.ad99776e.js.map": "/twitch-gacha-overlay/static/js/main.ad99776e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.782e720c.css",
+    "static/js/main.ad99776e.js"
+  ]
+}
