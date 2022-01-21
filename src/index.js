@@ -13,6 +13,8 @@ const io = new Server(server, { cors: { origin: '*' } });
 
 const animeApi = new AnimeAPI();
 
+const PORT = process.env.PORT || 3000;
+
 app.get('/api/get-random-character', async (req, res) => {
   try {
     const type = req.query.type;
@@ -36,4 +38,4 @@ io.on('connection', (socket) => {
   console.log('a user connected');
 });
 
-server.listen(3000, () => console.log(`> Ready on localhost:${3000}`));
+server.listen(PORT, () => console.log(`> Ready on localhost:${3000}`));
