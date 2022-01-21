@@ -28,7 +28,8 @@ app.get('/api/get-random-character', async (req, res) => {
 
     io.emit(channel, character);
 
-    res.sendStatus(204); // Successful no body
+    // res.sendStatus(204); // Successful no body
+    res.send(JSON.stringify(character));
   } catch (err) {
     res.sendStatus(500);
   }
