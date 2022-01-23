@@ -58,7 +58,7 @@ app.get('/api/count', async (req, res) => {
 
   try {
     const [[{ count }]] = await query('SELECT COUNT(*) count FROM Pulls WHERE TwitchID = ?', [sender]);
-    res.send(`@${sender} pulled ${count} unique characters ${count > 0 ? 'PogChamp' : 'LUL'}`);
+    res.send(`@${sender} pulled ${count} unique characters ${count > 0 ? 'already GanyuPls' : 'PaimonNoise'}`);
   } catch (err) {
     res.send(`@Marviuz AN ERROR OCCURED!!! ${err.message}`);
   }
